@@ -1,0 +1,50 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* 浅色主题 */
+.light {
+  --bg-primary: #faf9f6;
+  --bg-secondary: #f0efe9;
+  --bg-tertiary: #e8e6df;
+  --border: #e0dfd9;
+  --text-primary: #2c2c2c;
+  --text-secondary: #666;
+  --text-muted: #999;
+  --accent: #4a6cf7;
+  --accent-light: rgba(74, 108, 247, 0.1);
+  --code-bg: #f4f3ef;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* 深色主题 */
+.dark {
+  --bg-primary: #1e1e2e;
+  --bg-secondary: #181825;
+  --bg-tertiary: #11111b;
+  --border: #313244;
+  --text-primary: #cdd6f4;
+  --text-secondary: #a6adc8;
+  --text-muted: #6c7086;
+  --accent: #89b4fa;
+  --accent-light: rgba(137, 180, 250, 0.1);
+  --code-bg: #24243a;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.content {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+}

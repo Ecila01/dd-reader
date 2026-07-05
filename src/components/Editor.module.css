@@ -1,0 +1,190 @@
+.editor {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  background: var(--bg-tertiary);
+}
+
+.pane {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.paneHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 12px;
+  background: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.paneLabel {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.paneInfo {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.paneActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 同步滚动按钮 */
+.syncBtn {
+  border: 1px solid var(--border);
+  background: transparent;
+  font-size: 12px;
+  padding: 1px 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: all 0.15s;
+  line-height: 1.4;
+}
+
+.syncBtn:hover {
+  border-color: var(--accent);
+  color: var(--text-primary);
+}
+
+.syncActive {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-light);
+}
+
+/* 编辑器文本域 */
+.textarea {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  resize: none;
+  font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  outline: none;
+  tab-size: 2;
+}
+
+.textarea::placeholder {
+  color: var(--text-muted);
+}
+
+/* 分隔线 */
+.divider {
+  width: 4px;
+  background: var(--border);
+  cursor: col-resize;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.divider:hover,
+.dividerActive {
+  background: var(--accent);
+}
+
+/* 预览区 */
+.preview {
+  flex: 1;
+  overflow-y: auto;
+  background: var(--bg-primary);
+}
+
+.previewContent {
+  padding: 20px;
+  color: var(--text-primary);
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+.previewContent h1 { font-size: 1.5em; margin: 0 0 0.6em; }
+.previewContent h2 { font-size: 1.25em; margin: 1em 0 0.5em; }
+.previewContent p { margin: 0 0 0.8em; text-align: justify; }
+.previewContent code {
+  font-family: 'Cascadia Code', monospace;
+  font-size: 0.9em;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  background: var(--code-bg);
+}
+.previewContent pre {
+  padding: 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+  background: var(--code-bg);
+  margin: 0.8em 0;
+}
+.previewContent pre code {
+  padding: 0;
+  background: none;
+}
+.previewContent blockquote {
+  margin: 0.8em 0;
+  padding: 0.4em 0.8em;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-light);
+  color: var(--text-secondary);
+}
+.previewContent ul, .previewContent ol {
+  padding-left: 1.5em;
+  margin: 0.4em 0 0.8em;
+}
+.previewContent li {
+  margin: 0.3em 0;
+}
+.previewContent a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.previewContent a:hover {
+  text-decoration: underline;
+}
+/* 表格样式 */
+.previewContent table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+  font-size: 0.9em;
+}
+.previewContent th,
+.previewContent td {
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  text-align: left;
+}
+.previewContent th {
+  background: var(--bg-secondary);
+  font-weight: 600;
+}
+.previewContent tr:nth-child(even) {
+  background: var(--bg-tertiary);
+}
+.previewContent hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 1.5em 0;
+}
+
+.previewEmpty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-style: italic;
+}

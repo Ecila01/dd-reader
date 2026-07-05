@@ -1,0 +1,83 @@
+/* 全局样式重置 */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans CJK SC',
+    'Microsoft YaHei', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(128, 128, 128, 0.5);
+}
+
+/* 选中文本 */
+::selection {
+  background: rgba(74, 108, 247, 0.2);
+  color: inherit;
+}
+
+/* 禁止文本拖拽 */
+body {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* 允许在输入区选择文本 */
+textarea,
+.markdown,
+.previewContent,
+[contenteditable] {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+/* KaTeX 公式样式 */
+.katex-display {
+  margin: 1.2em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-align: center;
+}
+
+.katex-display > .katex {
+  display: inline-block;
+  text-align: center;
+}
+
+.katex {
+  font-size: 1.1em;
+}
+
+.katex-error {
+  color: #e06c75;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: rgba(224, 108, 117, 0.1);
+}
